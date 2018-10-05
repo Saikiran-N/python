@@ -1,0 +1,25 @@
+
+#below are the arrays to convert binary to number
+arr = [0,1,1,0,1,0,1]
+def binary_array_to_number(arr):
+    s = 0
+    #navie programming style
+    for digit in arr:
+        s = s * 2 + digit
+        print('s=',s,'digit',digit)
+    return s
+print(binary_array_to_number(arr))
+
+#best practise
+def binary_array_to_number_map(arr):
+    print("".join(map(str, arr))) 
+    return int("".join(map(str, arr)), 2)
+print(binary_array_to_number_map(arr))
+
+#works as map
+def binary_array_to_number_mine(arr):
+    y =''.join(str(e) for e in arr)
+    print(y)
+    return int(y, 2)
+print(binary_array_to_number_mine(arr))
+#end of binary to number function
