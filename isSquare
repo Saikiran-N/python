@@ -1,0 +1,17 @@
+import math
+def is_square(n):
+    return n > -1 and math.sqrt(n) % 1 == 0;
+    
+    
+    
+ #mine code   
+    def is_square(n):  
+    if n == 0:
+        return True
+    for value in range(n):
+        final = (value*value)        
+        if final == n:
+            return True
+        if final > n:
+            return False
+    return False
